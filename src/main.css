@@ -1,12 +1,17 @@
+html {
+	height:100%;
+}
 body {
 	background: #DDD;
+	height:100%;
 }
 h1, h2, h3, h4 {
 	font-family: "Roboto Slab";
 }
 .container {
 	background: #FFF;
-	width: 800px;
+	min-height:100%;
+	box-shadow: 0 0px 20px 0px #666;
 }
 
 .header-text {
@@ -22,4 +27,7 @@ h1, h2, h3, h4 {
 div.selectgroup {
 	width:100%;
 	text-align:center;
+}
+.selectedSources div ul li .badge:hover {
+	cursor: pointer;
 }

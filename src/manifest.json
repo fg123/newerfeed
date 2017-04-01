@@ -18,11 +18,12 @@
 "content_security_policy": "script-src 'self' https://newsapi.org/ https://fonts.googleapis.com/ https://code.jquery.com/; object-src 'self'", 
 "permissions": [
     "tabs", "storage", "unlimitedStorage"
- ]/*,
- "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": true
-  }*/
+ ],
+ "content_scripts": [{
+      "matches": [ "*://*.facebook.com/*" ],
+      "js": [ "moment.js","moment-duration-format.js", "jquery-3.2.1.min.js", "content.js" ],
+      "run_at": "document_start"
+	  
+  }],
+  "web_accessible_resources": [ "newsfeedItem.html"]
 }

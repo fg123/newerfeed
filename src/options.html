@@ -2,14 +2,10 @@
 <html>
 	<head>
 		<title>Newer Feed Options</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="bootstrap.min.css" >
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="main.css">
-		<script
- 			src="https://code.jquery.com/jquery-3.2.1.min.js"
-  			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  			crossorigin="anonymous"></script>
+		<script src="jquery-3.2.1.min.js"></script>
 		<script src="options.js" type="text/javascript"></script>
 	</head>
 	<body>
@@ -26,20 +22,34 @@
 				</div>
 			</div>
 			<hr>
-			<div class="row categories">
-				<div class="col-md-12">
-					<h3>Choose your categories: </h3>
-					<div class="selectgroup"><a href="#" class="cselectBtn">Select All</a> | <a href="#" class="cunselectBtn">Unselect All</a></div>
-				</div>
-			</div>
-			<div class="row sources">
-				<div class="col-md-12">
-					<h3>Choose your sources: </h3>
-					<div class="selectgroup"><a href="#" class="sselectBtn">Select All</a> | <a href="#" class="sunselectBtn">Unselect All</a></div>
-					<div class="sourceDisplay">
-						
+			<div class="row">
+				<div class="col-md-1">&nbsp;</div>
+				<div class="col-md-7" style="border-right: 1px solid #DDD">	
+					<div class="row categories">
+						<div class="col-md-12">
+							<h3>Filter the sources: </h3>
+							<div class="selectgroup"><a href="#" class="cselectBtn">Select All</a> | <a href="#" class="cunselectBtn">Unselect All</a></div>
+						</div>
+					</div>
+					<div class="row sources">
+						<div class="col-md-12">
+							<h3>Choose your sources: </h3>
+							<div class="selectgroup"><a href="#" class="sselectBtn">Select All</a> | <a href="#" class="sunselectBtn">Unselect All</a></div>
+							<div class="noSource">
+								No Sources Found!
+							</div>
+						</div>
 					</div>
 				</div>
+				<div class="col-md-3">
+					<div class="row selectedSources">
+						<div class="col-md-12">
+							<h3>Selected Sources: </h3>
+							<div class="noSourceSel">No Sources Selected!</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1">&nbsp;</div>
 			</div>
 		</div>
 	</body>
