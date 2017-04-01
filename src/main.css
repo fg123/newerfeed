@@ -1,0 +1,25 @@
+body {
+	background: #DDD;
+}
+h1, h2, h3, h4 {
+	font-family: "Roboto Slab";
+}
+.container {
+	background: #FFF;
+	width: 800px;
+}
+
+.header-text {
+	text-align:center;
+}
+
+.header-icon {
+	text-align:right;
+}
+.header-icon img {
+	width: 50%;
+}
+div.selectgroup {
+	width:100%;
+	text-align:center;
+}
