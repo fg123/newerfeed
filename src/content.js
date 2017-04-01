@@ -90,7 +90,7 @@ function getArticle(injectPoint) {
 //   object, returns a html DOM object ready for INJECTION!
 function buildNewStory(article, source, injectPoint) { 
 	// Here is the standard string first.
-	var articleTime = Date.parse(article.publishedAt);
+	var articleTime = moment(article.publishedAt);
 	var parser = document.createElement('a');
 	parser.href = article.url;
 
@@ -98,8 +98,8 @@ function buildNewStory(article, source, injectPoint) {
 		["\\$\\[SOURCEURL\\]", source.url],
 		["\\$\\[SOURCEIMG\\]", source.urlsToLogos.medium],
 		["\\$\\[SOURCENAME\\]", source.name],
-		["\\$\\[TIMELONG\\]", moment(articleTime).format('MMMM Do YYYY, h:mm:ss a')],
-		["\\$\\[TIMEUTC\\]", articleTime.UTC],
+		["\\$\\[TIMELONG\\]", articleTime.format('MMMM Do, YYYY')],
+		["\\$\\[TIMEUTC\\]", articleTime.valueOf()],
 		["\\$\\[ARTICLESUMMARY\\]", article.description],
 		["\\$\\[ARTICLELINK\\]", article.url],
 		["\\$\\[ARTICLELINKSHORT\\]", parser.hostname],
