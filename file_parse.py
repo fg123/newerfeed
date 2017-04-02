@@ -24,9 +24,6 @@ def frequency(article_text):
 sources = ["abc-news-au", "bbc-news", "bloomberg", "breitbart-news", "business-insider", "cnbc", "cnn", "the-new-york-times", "the-wall-street-journal"]
 
 
-def freq(words):
-	dic = {}
-
 total_article=[]
 
 for i in sources:
@@ -43,8 +40,12 @@ for i in sources:
 		url_temp = "Url:"+website.url
 		total_text = []
 		text = [url_temp]
+		total = 0
+		for l in temp2.keys():
+			total += temp2[l]
+
 		for i in temp2.keys():
-			string = i + ". " + str(temp2[i])
+			string = i + ". " + str(temp2[i]/total)
 			text.append(string)
 
 		total_text.append(text)
